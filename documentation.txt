@@ -1,0 +1,16 @@
+=== create package.json file ===
+npm init --y
+
+=== install puppeteer cha mocha ===
+npm i puppeteer mocha chai
+
+=== install firefox puppeteer ===
+npm i puppeteer-firefox
+
+=== run build ===
+npm run build
+
+=== deleted build folder ===
+npm run clean
+
+
