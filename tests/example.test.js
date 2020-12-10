@@ -1,5 +1,7 @@
 // const puppeteer = require("puppeteer")
 import puppeteer from "puppeteer";
+import Homepage from "./homepage";
+
 
 describe("load the URL", () => {
     it("should work", async () => {
@@ -7,8 +9,10 @@ describe("load the URL", () => {
             headless: false
         });
         const page = await browser.newPage();
-        await page.goto("http://zero.webappsecurity.com/index.html");
+        const homepage = new Homepage(page);
+        // await page.goto("http://zero.webappsecurity.com/index.html");
         // await page.waitFor(5000);
+        await homepage.visit();
         await browser.close();
     });
 });
